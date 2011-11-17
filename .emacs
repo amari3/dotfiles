@@ -20,6 +20,11 @@
 (set-buffer-file-coding-system 'utf-8)
 (setq default-buffer-file-coding-system 'utf-8)
 
+;; load environment value
+(load-file (expand-file-name "~/.emacs.d/shellenv.el"))
+(dolist (path (reverse (split-string (getenv "PATH") ":")))
+  (add-to-list 'exec-path path))
+
 (setq load-path
       (append
        (list
@@ -102,7 +107,8 @@
 
 ;;;;;; shell
 ;; using bash of cygwin
-(setq explicit-shell-file-name "bash")
+;(setq explicit-shell-file-name "bash")
+(setq explicit-shell-file-name "zsh")
 (setq shell-file-name "sh")
 (setq shell-command-switch "-c")
 
