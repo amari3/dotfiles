@@ -9,6 +9,8 @@ alias e="emacs"
 
 #### bindkey
 bindkey -e
+bindkey '^R' history-incremental-pattern-search-backward
+bindkey '^S' history-incremental-pattern-search-forward
 
 #### completion
 autoload -U compinit
@@ -18,6 +20,7 @@ setopt auto_name_dirs
 setopt auto_pushd
 setopt auto_remove_slash
 setopt extended_glob
+setopt no_flow_control
 
 #### history
 HISTFILE=$HOME/.zsh-history
