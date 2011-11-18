@@ -1,0 +1,23 @@
+#escape ^z^z
+escape ^Tt
+startup_message off
+hardstatus alwayslastline I%wI
+defhstatus I^En:^EtI
+termcap kterm hs@
+terminfo kterm hs@
+vbell off
+shell -$SHELL
+autodetach on
+scrollback 1000
+altscreen on
+bind w windowlist -b
+bind 2 split
+bind 1 only
+bind 0 remove
+bind o focus
+
+## http://frexx.de/xterm-256-notes/
+# erase background with current bg color
+defbce "on"
+# do not use 'screen-bce'
+term xterm-256color
