@@ -6,6 +6,7 @@ alias la="ls -al"
 alias less="less"
 alias sc="screen"
 alias e="emacs"
+alias perlsrc="perldoc -MPod::Strip"
 
 #### bindkey
 bindkey -e
