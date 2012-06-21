@@ -49,13 +49,13 @@ setopt cdable_vars sh_word_split auto_param_keys
 limit coredumpsize 0
 
 #### ssh_screen
-function ssh_screen(){
-	eval server=\${$#}
-	screen -t $server ssh "$@"
-}
-if [ x$TERM = xscreen ]; then
-	alias ssh=ssh_screen
-fi
+#function ssh_screen(){
+#	eval server=\${$#}
+#	screen -t $server ssh "$@"
+#}
+#if [ x$TERM = xscreen ]; then
+#	alias ssh=ssh_screen
+#fi
 
 #### dabbrev
 HARDCOPYFILE=$HOME/tmp/screen-hardcopy
