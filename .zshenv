@@ -5,7 +5,7 @@ export LC_ALL=ja_JP.UTF-8
 export LANG=ja_JP.UTF-8
 export PAGER=less
 export FTP_PASSIVE=1
-export PATH=~/bin:/usr/local/firefox:$PATH
+export PATH=~/bin:/usr/local/bin:$PATH
 export LESS='-R'
 export LESSOPEN='| $HOME/bin/src-hilite-lesspipe.sh %s'
 
