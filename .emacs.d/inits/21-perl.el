@@ -10,18 +10,28 @@
      ;; key config
      (define-key cperl-mode-map (kbd ";") nil)))
 (defalias 'perl-mode 'cperl-mode)
+(setq cperl-close-paren-offset -4)
+(setq cperl-continued-statement-offset 4)
+(setq cperl-indent-level 4)
+(setq cperl-label-offset -4)
+(setq cperl-indent-parens-as-block t)
+(setq cperl-tab-always-indent t)
+(setq cperl-auto-newline t)
+(setq cperl-autoindent-on-semi t)
+(setq cperl-highlight-variables-indiscriminately t)
+(setq cperl-font-lock t)
 
 ;; perl-completion
 ;; (auto-install-from-emacswiki "perl-completion.el")
-(autoload 'perl-completion-mode "perl-completion" nil t)
-(defvar ac-source-my-perl-completion
-  '((candidates . plcmp-ac-make-cands)))
+(add-hook 'cperl-mode-hook
+          (lambda()
+            (require 'perl-completion)
+            (perl-completion-mode t)))
 
-;; hook
-(defun my-cperl-mode-hook ()
-  (interactive)
-  (perl-completion-mode t)
-  (when (boundp 'auto-complete-mode)
-    (add-to-list 'ac-sources 'ac-source-my-perl-completion)))
-(add-hook 'cperl-mode-hook 'my-cperl-mode-hook)
-
+(add-hook 'cperl-mode-hook
+          (lambda ()
+            (when (require 'auto-complete nil t)
+              (auto-complete-mode t)
+              (make-variable-buffer-local 'ac-sources)
+              (setq ac-sources
+                    '(ac-source-perl-completion)))))
