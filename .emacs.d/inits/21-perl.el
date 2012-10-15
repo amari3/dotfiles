@@ -28,6 +28,8 @@
             (require 'perl-completion)
             (perl-completion-mode t)))
 
+;; auto-complete
+;; (auto-install-batch "auto-complete development version")
 (add-hook 'cperl-mode-hook
           (lambda ()
             (when (require 'auto-complete nil t)
