@@ -26,7 +26,8 @@
 (add-hook 'cperl-mode-hook
           (lambda()
             (require 'perl-completion)
-            (perl-completion-mode t)))
+            (perl-completion-mode t)
+            (flymake-mode t)))
 
 ;; auto-complete
 ;; (auto-install-batch "auto-complete development version")
