@@ -12,6 +12,8 @@
 (define-key global-map (kbd "C-t") 'dabbrev-expand)
 (define-key global-map (kbd "C-c g") 'goto-line)
 (define-key global-map (kbd "C-x C-h") 'help)
+(define-key global-map (kbd "C-m") 'newline-and-indent)
+(define-key global-map (kbd "C-j") 'newline)
 
 ;; sticky
 ;; (auto-install-from-emacswiki "sticky.el")
