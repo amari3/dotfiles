@@ -13,6 +13,7 @@
 (define-key global-map (kbd "C-x C-h") 'help)
 (define-key global-map (kbd "C-m") 'newline-and-indent)
 (define-key global-map (kbd "C-j") 'newline)
+(define-key global-map (kbd "C-c l") 'toggle-truncate-lines)
 
 ;; sticky
 ;; (auto-install-from-emacswiki "sticky.el")
