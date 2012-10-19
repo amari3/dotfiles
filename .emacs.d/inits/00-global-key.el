@@ -8,9 +8,8 @@
 ;; global-set-key
 (define-key global-map (kbd "C-h") 'delete-backward-char)
 (define-key global-map (kbd "C-o") 'other-window)
-(define-key global-map (kbd "C-c ;") 'comment-region)
-(define-key global-map (kbd "C-t") 'dabbrev-expand)
-(define-key global-map (kbd "C-c g") 'goto-line)
+(define-key global-map (kbd "C-c ;") 'comment-or-uncomment-region)
+(define-key global-map (kbd "C-c C-i") 'dabbrev-expand)
 (define-key global-map (kbd "C-x C-h") 'help)
 (define-key global-map (kbd "C-m") 'newline-and-indent)
 (define-key global-map (kbd "C-j") 'newline)
