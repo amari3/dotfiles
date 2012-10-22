@@ -1,5 +1,4 @@
 ;;; tt-mode
-; (auto-install-from-url "http://dave.org.uk/emacs/tt-mode.el")
-(load "tt-mode.el")
-(setq auto-mode-alist (append '(("\\.tt$" . tt-mode)) auto-mode-alist ))
-(setq auto-mode-alist (append '(("\\.tt2$" . tt-mode)) auto-mode-alist ))
+;; (auto-install-from-url "http://dave.org.uk/emacs/tt-mode.el")
+(autoload 'tt-mode "tt-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.tt$" . tt-mode))
