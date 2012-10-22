@@ -10,6 +10,7 @@
      ;; key config
      (define-key cperl-mode-map (kbd ";") nil)))
 (defalias 'perl-mode 'cperl-mode)
+(add-to-list 'auto-mode-alist '("\\.psgi$" . cperl-mode))
 (setq cperl-close-paren-offset -4)
 (setq cperl-continued-statement-offset 4)
 (setq cperl-indent-level 4)
