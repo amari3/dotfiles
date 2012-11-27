@@ -26,4 +26,7 @@
 (set-face-background 'highlight "yellow")
 (set-face-foreground 'highlight "black")
 (set-face-background 'region "lightgoldenrod2")
-
+(set-face-foreground 'region "black")
+(set-face-foreground 'modeline "skyblue1")
+(set-face-background 'modeline "grey19")
+(set-face-foreground 'minibuffer-prompt "cyan1")
