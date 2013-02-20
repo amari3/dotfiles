@@ -20,3 +20,5 @@
 (dolist (path (reverse (split-string (getenv "PATH") ":")))
   (add-to-list 'exec-path path))
 
+(put 'downcase-region 'disabled nil)
+(put 'upcase-region 'disabled nil)
