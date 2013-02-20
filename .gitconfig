@@ -1,10 +1,10 @@
 [user]
-	name = amari3
-	email = ryo2.amari3@gmail.com
+    name = amari3
+    email = ryo2.amari3@gmail.com
 [color]
-	ui = auto
+    ui = auto
 [alias]
-	st = status -sb
+    st = status -sb
     ci = commit
     co = checkout
     correct = commit --amend
