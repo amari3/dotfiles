@@ -3,3 +3,16 @@
 	email = ryo2.amari3@gmail.com
 [color]
 	ui = auto
+[alias]
+	st = status -sb
+    ci = commit
+    co = checkout
+    correct = commit --amend
+    switch = checkout
+    fork = checkout -b
+    join = merge --no-ff
+    stage = add
+    staged = diff --cached
+    stashed = stash list
+    history = log --oneline --graph --date=short --decorate
+    commitdiff = cherry -v
