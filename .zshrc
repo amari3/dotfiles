@@ -3,9 +3,11 @@ alias ls="ls -F"
 alias l="ls -l"
 alias ll="ls -Al"
 alias la="ls -al"
-alias less="less"
+#alias less="less"
 alias sc="screen"
-alias e="emacs"
+alias emacs="TERM=xterm-256color /usr/local/bin/emacs"
+alias e="emacsclient -t"
+alias kill-emacs="emacsclient -e '(kill-emacs)'"
 alias perlsrc="perldoc -MPod::Strip"
 
 #### bindkey
@@ -48,35 +50,10 @@ setopt cdable_vars sh_word_split auto_param_keys
 #### limit
 limit coredumpsize 0
 
-#### ssh_screen
-#function ssh_screen(){
-#	eval server=\${$#}
-#	screen -t $server ssh "$@"
-#}
-#if [ x$TERM = xscreen ]; then
-#	alias ssh=ssh_screen
-#fi
-
-#### dabbrev
-#HARDCOPYFILE=$HOME/tmp/screen-hardcopy
-#touch $HARDCOPYFILE
-
-#dabbrev-complete () {
-#	local reply lines=80
-#	screen -X eval "hardcopy -h $HARDCOPYFILE"
-#	reply=($(sed '/^$/d' $HARDCOPYFILE | sed '$ d' | tail -$lines))
-#	compadd - "${reply[@]%[*/=@|]}"
-#}
-
-zle -C dabbrev-complete menu-complete dabbrev-complete
-bindkey '^o' dabbrev-complete
-bindkey '^o^_' reverse-menu-complete
-
 source ~/perl5/perlbrew/etc/bashrc
-source ~/.nvm/nvm.sh
+#source ~/.nvm/nvm.sh
 
 umask 022
 
 ## create emacs env file
 perl -wle 'do { print qq/(setenv "$_" "$ENV{$_}")/ if exists $ENV{$_} } for @ARGV' PATH > ~/.emacs.d/shellenv.el
-
