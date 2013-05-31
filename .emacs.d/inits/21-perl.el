@@ -17,7 +17,7 @@
 (setq cperl-label-offset -4)
 (setq cperl-indent-parens-as-block t)
 (setq cperl-tab-always-indent t)
-(setq cperl-auto-newline t)
+;(setq cperl-auto-newline t)
 (setq cperl-autoindent-on-semi t)
 (setq cperl-highlight-variables-indiscriminately t)
 (setq cperl-font-lock t)
