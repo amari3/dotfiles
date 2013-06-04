@@ -26,4 +26,4 @@
      (define-key anything-command-map (kbd "y") 'yas/insert-snippet)))
 
 ;; snippet-mode for *.yasnippet files
-;(add-to-list 'auto-mode-alist '("\\.yasnippet$" . snippet-mode))
+(add-to-list 'auto-mode-alist '("\\.yasnippet$" . snippet-mode))
