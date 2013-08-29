@@ -9,7 +9,7 @@ export LESS='-R'
 export LESSOPEN='| $HOME/bin/src-hilite-lesspipe.sh %s'
 
 #### alias
-alias ls="ls -F"
+alias ls="ls --color=auto -F"
 alias l="ls -l"
 alias ll="ls -Al"
 alias la="ls -al"
