@@ -13,12 +13,15 @@ alias ls="ls --color=auto -F"
 alias l="ls -l"
 alias ll="ls -Al"
 alias la="ls -al"
-#alias less="less"
-alias sc="screen"
 alias emacs="TERM=xterm-256color /usr/local/bin/emacs"
 alias e="emacsclient -t"
 alias kill-emacs="emacsclient -e '(kill-emacs)'"
 alias perlsrc="perldoc -MPod::Strip"
+alias dstat-full='dstat -Tclmdrn'
+alias dstat-mem='dstat -Tclm'
+alias dstat-cpu='dstat -Tclr'
+alias dstat-net='dstat -Tclnd'
+alias dstat-disk='dstat -Tcldr'
 
 #### bindkey
 bindkey -e
@@ -60,10 +63,12 @@ setopt cdable_vars sh_word_split auto_param_keys
 #### limit
 limit coredumpsize 0
 
-source ~/perl5/perlbrew/etc/bashrc
+#source ~/perl5/perlbrew/etc/bashrc
 #source ~/.nvm/nvm.sh
 
 umask 022
 
 ## create emacs env file
 perl -wle 'do { print qq/(setenv "$_" "$ENV{$_}")/ if exists $ENV{$_} } for @ARGV' PATH > ~/.emacs.d/shellenv.el
+export PATH="$HOME/.plenv/bin:$PATH"
+eval "$(plenv init -)"
