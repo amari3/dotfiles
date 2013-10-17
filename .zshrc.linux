@@ -25,7 +25,7 @@ alias dstat-disk='dstat -Tcldr'
 
 #### bindkey
 bindkey -e
-bindkey '^R' history-incremental-pattern-search-backward
+#bindkey '^R' history-incremental-pattern-search-backward
 bindkey '^S' history-incremental-pattern-search-forward
 
 #### completion
@@ -68,7 +68,35 @@ limit coredumpsize 0
 
 umask 022
 
-## create emacs env file
+#### create emacs env file
 perl -wle 'do { print qq/(setenv "$_" "$ENV{$_}")/ if exists $ENV{$_} } for @ARGV' PATH > ~/.emacs.d/shellenv.el
+
+#### plenv
 export PATH="$HOME/.plenv/bin:$PATH"
 eval "$(plenv init -)"
+
+#### pyenv
+export PYENV_ROOT="${HOME}/.pyenv"
+if [ -d "${PYENV_ROOT}" ]; then
+    export PATH=${PYENV_ROOT}/bin:$PATH
+    eval "$(pyenv init -)"
+fi
+
+#### percol
+## pip install percol
+function percol-select-history() {
+    local tac
+    if which tac > /dev/null; then
+        tac="tac"
+    else
+        tac="tail -r"
+    fi
+    BUFFER=$(history -n 1 | \
+        eval $tac | \
+        percol --match-method regex --query "$LBUFFER")
+    CURSOR=$#BUFFER
+    zle clear-screen
+}
+zle -N percol-select-history
+bindkey '^r' percol-select-history
+
