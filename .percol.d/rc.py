@@ -1,8 +1,3 @@
-## keymap
-# Mac で delete（backspace）が効くようにする
-SPECIAL_KEYS.update({
-    127: '<backspace>'
-})
 percol.import_keymap({
     "C-h" : lambda percol: percol.command.delete_backward_char(),
     "C-d" : lambda percol: percol.command.delete_forward_char(),
