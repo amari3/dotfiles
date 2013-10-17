@@ -60,10 +60,14 @@ setopt cdable_vars sh_word_split auto_param_keys
 #### limit
 limit coredumpsize 0
 
-source ~/perl5/perlbrew/etc/bashrc
+#source ~/perl5/perlbrew/etc/bashrc
 #source ~/.nvm/nvm.sh
 
 umask 022
 
-## create emacs env file
+#### create emacs env file
 perl -wle 'do { print qq/(setenv "$_" "$ENV{$_}")/ if exists $ENV{$_} } for @ARGV' PATH > ~/.emacs.d/shellenv.el
+
+#### plenv
+export PATH="$HOME/.plenv/bin:$PATH"
+eval "$(plenv init -)"
