@@ -7,6 +7,7 @@ export FTP_PASSIVE=1
 export PATH=~/bin:/usr/local/bin:$PATH
 export LESS='-R'
 export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
+export HOMEBREW_GITHUB_API_TOKEN=48990aa78f0f7aec0730dd7966537b410dd630b5
 
 #### alias
 alias ls="ls -F"
@@ -78,6 +79,14 @@ if [ -d "${PYENV_ROOT}" ]; then
     eval "$(pyenv init -)"
 fi
 
+#### rbenv
+export PATH="$HOME/.rbenv/shims:$PATH"
+eval "$(rbenv init -)"
+
+#### mysql-build
+export PATH=$HOME/mysql-build/bin:$PATH
+export PATH=$HOME/opt/mysql/5.5.34/bin:$PATH
+
 #### percol
 ## pip install percol
 function percol-select-history() {
@@ -95,4 +104,3 @@ function percol-select-history() {
 }
 zle -N percol-select-history
 bindkey '^r' percol-select-history
-
