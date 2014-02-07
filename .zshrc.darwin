@@ -69,8 +69,10 @@ umask 022
 perl -wle 'do { print qq/(setenv "$_" "$ENV{$_}")/ if exists $ENV{$_} } for @ARGV' PATH > ~/.emacs.d/shellenv.el
 
 #### plenv
-export PATH="$HOME/.plenv/bin:$PATH"
-eval "$(plenv init -)"
+if [ -d ${HOME}/.plenv  ] ; then
+   export PATH=${HOME}/.plenv/bin/:${HOME}/.plenv/shims:${PATH}
+   eval "$(plenv init -)"
+fi
 
 #### pyenv
 export PYENV_ROOT="${HOME}/.pyenv"
@@ -80,8 +82,10 @@ if [ -d "${PYENV_ROOT}" ]; then
 fi
 
 #### rbenv
-export PATH="$HOME/.rbenv/shims:$PATH"
-eval "$(rbenv init -)"
+if [ -d ${HOME}/.rbenv  ] ; then
+   export PATH="${HOME}/.rbenv/bin:${HOME}/.rbenv/shims:${PATH}"
+   eval "$(rbenv init -)"
+fi
 
 #### mysql-build
 export PATH=$HOME/mysql-build/bin:$PATH
