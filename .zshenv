@@ -1,9 +1,0 @@
-export SHELL=`which zsh`
-export LANGUAGE=ja_JP:ja:en_GB:en
-export LANG=ja_JP.UTF-8
-export PAGER=less
-export FTP_PASSIVE=1
-export PATH=~/bin:/usr/local/bin:$PATH
-export LESS='-R'
-#export LESSOPEN='| $HOME/bin/src-hilite-lesspipe.sh %s'
-export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
