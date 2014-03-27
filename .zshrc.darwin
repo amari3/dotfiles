@@ -60,7 +60,6 @@ setopt cdable_vars sh_word_split auto_param_keys
 #### limit
 limit coredumpsize 0
 
-#source ~/perl5/perlbrew/etc/bashrc
 #source ~/.nvm/nvm.sh
 
 umask 022
@@ -84,6 +83,12 @@ fi
 if [ -d ${HOME}/.rbenv  ] ; then
    export PATH="${HOME}/.rbenv/bin:${HOME}/.rbenv/shims:${PATH}"
    eval "$(rbenv init -)"
+fi
+
+#### phpenv
+if [ -d ${HOME}/.phpenv  ] ; then
+   export PATH=${HOME}/.phpenv/bin:${HOME}/.phpenv/shims:${PATH}
+   eval "$(phpenv init -)"
 fi
 
 #### mysql-build
