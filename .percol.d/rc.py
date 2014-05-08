@@ -1,3 +1,6 @@
+percol.view.PROMPT  = ur"<green>Input:</green> %q"
+percol.view.RPROMPT = ur"[%i/%I]"
+
 percol.import_keymap({
     "C-h" : lambda percol: percol.command.delete_backward_char(),
     "C-d" : lambda percol: percol.command.delete_forward_char(),
