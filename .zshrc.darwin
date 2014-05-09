@@ -35,6 +35,11 @@ setopt auto_remove_slash
 setopt extended_glob
 setopt no_flow_control
 
+#### completion
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' enable git svn
+zstyle ':vcs_info:*' formats $'%{\e[35m%} [%s %r %b]%{\e[m%}'
+
 #### history
 HISTFILE=$HOME/.zsh-history
 HISTSIZE=10000
@@ -47,9 +52,14 @@ setopt hist_no_store
 function history-all { history -E 1 }
 
 #### prompt
+function precmd_vcs() {
+    vcs_info
+    RPROMPT='%{[33m%}%(5~,%-2~/.../%2~,%~)'${vcs_info_msg_0_}$'%{[m%}'
+}
 setopt prompt_subst
-PROMPT='%{[36m%}[%n@%m]%{[m%}%# '
-RPROMPT='%{[33m%}[%(5~,%-2~/.../%2~,%~)]%{[m%}'
+PROMPT='%{[36m%}%n@%m%{[m%}%# '
+#RPROMPT='%{[33m%}[%(5~,%-2~/.../%2~,%~)]%{[m%}'
+precmd_functions=(precmd_vcs)
 
 #### option
 setopt auto_menu correct
