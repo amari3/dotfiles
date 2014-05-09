@@ -34,3 +34,8 @@
                                ac-source-php-completion
                                ac-source-filename
                                ))))
+(add-hook 'php-mode-hook
+          (lambda ()
+            (when (require 'auto-complete nil t)
+              (make-local-variable 'ac-ignore-case)
+              (setq ac-ignore-case nil))))

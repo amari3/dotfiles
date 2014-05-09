@@ -38,4 +38,6 @@
               (auto-complete-mode t)
               (make-variable-buffer-local 'ac-sources)
               (setq ac-sources
-                    '(ac-source-perl-completion)))))
+                    '(ac-source-perl-completion))
+              (make-local-variable 'ac-ignore-case)
+              (setq ac-ignore-case nil))))
