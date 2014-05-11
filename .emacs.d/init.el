@@ -4,6 +4,17 @@
 (add-to-list 'load-path "~/.emacs.d/elisp")
 (add-to-list 'load-path "~/.emacs.d/auto-install")
 
+;; melpa
+;; https://github.com/milkypostman/melpa
+;; M-x package-list-packages
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+(when (< emacs-major-version 24)
+  ;; For important compatibility libraries like cl-lib
+  (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
+(package-initialize)
+
 ;; init-loader
 ;; http://coderepos.org/share/browser/lang/elisp/init-loader/init-loader.el
 (require 'init-loader)
