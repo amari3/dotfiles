@@ -1,1 +1,7 @@
 shellenv.el
+*.elc
+tramp
+ac-comphist.dat
+
+elpa/
+
