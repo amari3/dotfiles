@@ -16,3 +16,5 @@
     stashed = stash list
     history = log --oneline --graph --date=short --decorate
     commitdiff = cherry -v
+[push]
+    default = simple
