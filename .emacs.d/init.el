@@ -16,7 +16,7 @@
 (package-initialize)
 
 ;; init-loader
-;; http://coderepos.org/share/browser/lang/elisp/init-loader/init-loader.el
+;; https://raw.githubusercontent.com/emacs-jp/init-loader/master/init-loader.el
 (require 'init-loader)
 (init-loader-load "~/.emacs.d/inits")
 
