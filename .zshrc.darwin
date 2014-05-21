@@ -59,7 +59,7 @@ function precmd_vcs() {
 setopt prompt_subst
 PROMPT='%{[36m%}%n@%m%{[m%}%# '
 #RPROMPT='%{[33m%}[%(5~,%-2~/.../%2~,%~)]%{[m%}'
-precmd_functions=(precmd_vcs)
+precmd_functions+=(precmd_vcs)
 
 #### option
 setopt auto_menu correct
@@ -122,3 +122,10 @@ function percol-select-history() {
 }
 zle -N percol-select-history
 bindkey '^r' percol-select-history
+
+#### z.sh
+## brew install z
+if which brew > /dev/null; then
+    _Z_CMD=j
+    source $(brew --prefix)/etc/profile.d/z.sh
+fi
