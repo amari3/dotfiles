@@ -51,8 +51,8 @@ function history-all { history -E 1 }
 
 #### prompt
 setopt prompt_subst
-PROMPT='%{[36m%}[%n@%m]%{[m%}%# '
-RPROMPT='%{[33m%}[%(5~,%-2~/.../%2~,%~)]%{[m%}'
+PROMPT='%{[36m%}%n@%m%{[m%}%# '
+RPROMPT='%{[33m%}%(5~,%-2~/.../%2~,%~)%{[m%}'
 
 #### option
 setopt auto_menu correct
