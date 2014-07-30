@@ -7,4 +7,4 @@
 
 (add-hook 'speedbar-mode-hook
           '(lambda ()
-             (speedbar-add-supported-extension '("js" "html" "css" "php" "tpl" "ctp" "*"))))
+             (speedbar-add-supported-extension '("js" "html" "css" "php" "tpl" "ctp" "smarty" "*"))))
