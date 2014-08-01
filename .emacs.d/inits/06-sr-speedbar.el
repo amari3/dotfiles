@@ -1,5 +1,5 @@
 ;;; sr-speedbar
-;; package-install RET sr-speedbar
+;; (package-install 'sr-speedbar)
 
 (require 'sr-speedbar)
 (setq sr-speedbar-right-side nil)
