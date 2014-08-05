@@ -9,6 +9,12 @@
 
 (add-hook 'php-mode-hook
           (lambda ()
+            (setq tab-width 4)
+            (setq indent-tabs-mode t)
+            (setq c-basic-offset 4)))
+
+(add-hook 'php-mode-hook
+          (lambda ()
             (defun ywb-php-lineup-arglist-intro (langelem)
               (save-excursion
                 (goto-char (cdr langelem))
