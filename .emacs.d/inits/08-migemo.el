@@ -1,6 +1,6 @@
 ;;; cmigemo
 ;; brew install cmigemo
-;; package-install RET migemo
+;; (package-install 'migemo)
 (when (and (executable-find "cmigemo")
            (require 'migemo nil t))
   (setq migemo-options '("-q" "--emacs"))
