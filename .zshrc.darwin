@@ -116,7 +116,9 @@ export PATH=$HOME/opt/mysql/5.5.34/bin:$PATH
 ## pip install percol
 function percol-select-history() {
     local tac
-    if which tac > /dev/null; then
+    if which gtac > /dev/null; then
+        tac="gtac"
+    elif which tac > /dev/null; then
         tac="tac"
     else
         tac="tail -r"
