@@ -70,6 +70,9 @@ setopt cdable_vars sh_word_split auto_param_keys
 #### limit
 limit coredumpsize 0
 
+#### brew install zsh-syntax-highlighting
+[[ -f /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 #### nvm
 ### % git clone git://github.com/creationix/nvm.git .nvm
 ### % . nvm/nvm.sh
