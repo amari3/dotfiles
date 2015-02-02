@@ -26,4 +26,4 @@
      anything-c-source-recentf)
    "*anything my-anything*"))
 ;; original keybind is M-x quoted-insert
-(define-key global-map (kbd "C-q") 'my-anything)
+(define-key global-map (kbd "C-x ;") 'my-anything)
