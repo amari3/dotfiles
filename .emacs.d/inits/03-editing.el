@@ -21,3 +21,7 @@
 (define-key ac-menu-map (kbd "C-n") 'ac-next)
 (define-key ac-menu-map (kbd "C-p") 'ac-previous)
 (define-key ac-menu-map (kbd "M-TAB") nil)
+
+;; scroll
+(setq scroll-step 1)
+(setq-scroll-bar-mode 'right)
