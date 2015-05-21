@@ -77,7 +77,7 @@ limit coredumpsize 0
 ### % git clone git://github.com/creationix/nvm.git .nvm
 ### % . nvm/nvm.sh
 [[ -s ${HOME}/.nvm/nvm.sh ]] && . ${HOME}/.nvm/nvm.sh
-nvm alias default 0.8
+nvm alias default 0.10
 nvm use default
 npm_dir=${NVM_PATH}_modules
 export NODE_PATH=$npm_dir
