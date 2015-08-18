@@ -33,3 +33,5 @@
 
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
+
+(load-theme 'manoj-dark t)
