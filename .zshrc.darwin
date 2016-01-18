@@ -7,7 +7,7 @@ export PAGER=less
 export FTP_PASSIVE=1
 export LESS='-R'
 export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
-export HOMEBREW_GITHUB_API_TOKEN=48990aa78f0f7aec0730dd7966537b410dd630b5
+export HOMEBREW_GITHUB_API_TOKEN=e261f92258278776f9451476a9b3f5b08e3fdcc3
 
 #### alias
 alias ls="ls -F"
